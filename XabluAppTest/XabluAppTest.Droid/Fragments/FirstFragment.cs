@@ -5,9 +5,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using EggsToGo;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V4;
+using OxyPlot.Xamarin.Android;
 using XabluAppTest.Core.ViewModels;
 using XabluAppTest.Droid.Activities;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
@@ -24,6 +27,10 @@ namespace XabluAppTest.Droid.Fragments
         {
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
+            var plotView = view.FindViewById<PlotView>(Resource.Id.oxyplotModel);
+            var bindset = this.CreateBindingSet<FirstFragment, FirstViewModel>();
+            bindset.Bind(plotView).For(q => q.Model).To(vm => vm.Model);
+            bindset.Apply();
 
             _easter = new Easter(new KonamiCode());
 
@@ -37,8 +44,15 @@ namespace XabluAppTest.Droid.Fragments
             //You can see each individual command as it happens too
             _easter.CommandDetected += cmd => DoSwipe(cmd.Value);
 
-            var coreLayout = view.FindViewById<LinearLayout>(Resource.Id.coreLayout);
-            coreLayout?.SetOnTouchListener(this);
+            //var coreLayout = view.FindViewById<LinearLayout>(Resource.Id.coreLayout);
+            //coreLayout?.SetOnTouchListener(this);
+
+            var model = view.FindViewById<PlotView>(Resource.Id.oxyplotModel);
+            var listView = view.FindViewById<MvxListView>(Resource.Id.testListView);
+            model?.SetOnTouchListener(this);
+            listView?.SetOnTouchListener(this);
+
+
 
             return view;
         }
