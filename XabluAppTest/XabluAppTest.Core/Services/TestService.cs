@@ -34,13 +34,6 @@ namespace XabluAppTest.Core.Services
             {
                 throw new Exception(e.Message);
             }
-
-
-
-            //var webApiClient = new WebApiClient("http://37.157.197.226:26080/rest");
-            //webApiClient.Headers.Add("X-Email", "slctest@email.cz");
-            //webApiClient.Headers.Add("X-Password", "test");
-            //var test = await webApiClient.GetAsync(Priority.Background, "/security/session/v1");
         }
     }
 }
