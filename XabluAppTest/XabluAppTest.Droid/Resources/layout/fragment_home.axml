@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <include
+        layout="@layout/toolbar_layout" />
+  <LinearLayout android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <Button
+      android:id="@+id/testButton"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="Click ShowAnotherCommand"
+      android:text="AnotherView"
+      android:layout_weight="1" />
+      
+  </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/firstButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Click ShowFirstCommand"
+            android:text="First"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/seconedButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Click ShowSecondCommand"
+            android:text="Second"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/thirdButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Click ShowThirdCommand"
+            android:text="Third"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shopsSwipeRefreshLayout">
+        <MvxListView
+            android:layout_weight="1"
+            android:id="@+id/shopsListView"
+            local:MvxBind="ItemsSource Shops;"
+            local:MvxItemTemplate="@layout/view_shopitem"
+            android:divider="@color/main_dark_gray"
+            android:dividerHeight="2dp"
+            android:choiceMode="singleChoice"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
