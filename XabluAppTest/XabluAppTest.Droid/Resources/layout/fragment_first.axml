@@ -47,7 +47,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@android:color/white" />
-      <MvxListView
+      <xabluapptest.droid.custom.SmartListView
         android:id="@+id/testListView"
         android:layout_weight="1"
         android:layout_width="match_parent"
@@ -61,6 +61,20 @@
         android:background="@android:color/white"
         android:listSelector="@android:color/transparent"
         android:paddingTop="15dp" />
+      <!--<MvxListView
+        android:id="@+id/testListView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxBind="ItemsSource Items"
+        local:MvxItemTemplate="@layout/view_testitem"
+        android:divider="@android:color/white"
+        android:dividerHeight="1dp"
+        android:choiceMode="none"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="15dp" />-->
     </LinearLayout>
     <include
       layout="@layout/view_bottomribbon" />

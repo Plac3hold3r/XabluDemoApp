@@ -5,7 +5,6 @@ using Android.Content;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
-using MvvmCross.Droid.Shared.Presenter;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
@@ -34,7 +33,7 @@ namespace XabluAppTest.Droid
 
         protected override IMvxAndroidViewPresenter CreateViewPresenter()
         {
-            var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
+            var mvxFragmentsPresenter = new MvxAppCompatViewPresenter(AndroidViewAssemblies);
             Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
             return mvxFragmentsPresenter;
         }

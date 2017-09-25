@@ -63,7 +63,9 @@ namespace XabluAppTest.Core.ViewModels
         {
             if (swipeText.Equals("RIGHT"))
             {
+                Close(this);
                 UserDialogs.Instance.Toast("RIGHT SWIPE!");
+                ShowViewModel<ThirdViewModel>();
             }
 
             if (swipeText.Equals("LEFT"))

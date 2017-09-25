@@ -6,13 +6,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Views;
-using MvvmCross.Droid.Shared.Attributes;
+using MvvmCross.Droid.Views.Attributes;
 using MvvmCross.Platform;
 using XabluAppTest.Core.Interfaces;
 
 namespace XabluAppTest.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.navigation_frame, false)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.navigation_frame, false)]
     public class MenuFragment : BaseFragment<MenuViewModel>, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override int FragmentId => Resource.Layout.fragment_menu;

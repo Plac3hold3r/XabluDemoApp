@@ -12,13 +12,13 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Droid.Shared.Attributes;
+using MvvmCross.Droid.Views.Attributes;
 using OxyPlot.Xamarin.Android;
 using XabluAppTest.Core.ViewModels;
 
 namespace XabluAppTest.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, true)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, true)]
     public class AnotherFragment : BaseFragment<AnotherViewModel>
     {
         private View _view;

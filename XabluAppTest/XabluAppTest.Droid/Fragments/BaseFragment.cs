@@ -29,11 +29,11 @@ namespace XabluAppTest.Droid.Fragments
         private Toolbar _toolbar;
         private MvxActionBarDrawerToggle _drawerToggle;
 
-        public MvxCachingFragmentCompatActivity ParentActivity
+        public MvxAppCompatActivity ParentActivity
         {
             get
             {
-                return ((MvxCachingFragmentCompatActivity)Activity);
+                return ((MvxAppCompatActivity)Activity);
             }
         }
 

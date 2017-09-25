@@ -6,13 +6,13 @@ using Android.Widget;
 using EggsToGo;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Droid.Shared.Attributes;
+using MvvmCross.Droid.Views.Attributes;
 using XabluAppTest.Core.ViewModels;
 using OxyPlot.Xamarin.Android;
 
 namespace XabluAppTest.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame, true)]
+    [MvxFragmentPresentation(typeof(MainViewModel), Resource.Id.content_frame, true)]
     public class DashboardFragment : BaseFragment<DashboardViewModel>
     {
         protected override int FragmentId => Resource.Layout.fragment_dashboard;

@@ -23,7 +23,7 @@ namespace XabluAppTest.Droid.Activities
         Theme = "@style/AppTheme",
         LaunchMode = LaunchMode.SingleTop
     )]
-    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>, INavigationActivity
+    public class MainActivity : MvxAppCompatActivity<MainViewModel>, INavigationActivity
     {
         public DrawerLayout Drawer { get; set; }
 
@@ -71,35 +71,35 @@ namespace XabluAppTest.Droid.Activities
 
         #endregion
 
-        public override void OnBeforeFragmentChanging(MvvmCross.Droid.Shared.Caching.IMvxCachedFragmentInfo fragmentInfo, Android.Support.V4.App.FragmentTransaction transaction)
-        {
-            //if (fragmentInfo.Tag.Contains("FirstViewModel") || fragmentInfo.Tag.Contains("SecondViewModel") || fragmentInfo.Tag.Contains("ThirdViewModel"))
-            //{
-            //    transaction.SetCustomAnimations(
-            //        Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_slide_out_bottom,
-            //        Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
-            //}
-            //else
-            //{
-            //    transaction.SetCustomAnimations(
-            //        Resource.Animation.abc_fade_in,
-            //        Resource.Animation.abc_fade_out,
-            //        Resource.Animation.abc_fade_in,
-            //        Resource.Animation.abc_fade_out);
-            //}
+        //public override void OnBeforeFragmentChanging(MvvmCross.Droid.Shared.Caching.IMvxCachedFragmentInfo fragmentInfo, Android.Support.V4.App.FragmentTransaction transaction)
+        //{
+        //    //if (fragmentInfo.Tag.Contains("FirstViewModel") || fragmentInfo.Tag.Contains("SecondViewModel") || fragmentInfo.Tag.Contains("ThirdViewModel"))
+        //    //{
+        //    //    transaction.SetCustomAnimations(
+        //    //        Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_slide_out_bottom,
+        //    //        Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
+        //    //}
+        //    //else
+        //    //{
+        //    //    transaction.SetCustomAnimations(
+        //    //        Resource.Animation.abc_fade_in,
+        //    //        Resource.Animation.abc_fade_out,
+        //    //        Resource.Animation.abc_fade_in,
+        //    //        Resource.Animation.abc_fade_out);
+        //    //}
 
-            transaction.SetCustomAnimations(
-                Resource.Animation.abc_fade_in,
-                Resource.Animation.abc_fade_out,
-                Resource.Animation.abc_fade_in,
-                Resource.Animation.abc_fade_out);
+        //    transaction.SetCustomAnimations(
+        //        Resource.Animation.abc_fade_in,
+        //        Resource.Animation.abc_fade_out,
+        //        Resource.Animation.abc_fade_in,
+        //        Resource.Animation.abc_fade_out);
 
-            //transaction.SetCustomAnimations(
-            //    Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_slide_out_bottom,
-            //    Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
+        //    //transaction.SetCustomAnimations(
+        //    //    Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_slide_out_bottom,
+        //    //    Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
 
-            base.OnBeforeFragmentChanging(fragmentInfo, transaction);
-        }
+        //    base.OnBeforeFragmentChanging(fragmentInfo, transaction);
+        //}
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -130,10 +130,10 @@ namespace XabluAppTest.Droid.Activities
             CurrentFocus.ClearFocus();
         }
 
-        protected override void ShowFragment(string tag, int contentId, Bundle bundle, bool forceAddToBackStack = false, bool forceReplaceFragment = false)
-        {
-            base.ShowFragment(tag, contentId, bundle, forceAddToBackStack, true);
-        }
+        //protected override void ShowFragment(string tag, int contentId, Bundle bundle, bool forceAddToBackStack = false, bool forceReplaceFragment = false)
+        //{
+        //    base.ShowFragment(tag, contentId, bundle, forceAddToBackStack, true);
+        //}
     }
 
     public interface INavigationActivity

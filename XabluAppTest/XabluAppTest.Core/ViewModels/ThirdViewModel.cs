@@ -25,7 +25,9 @@ namespace XabluAppTest.Core.ViewModels
 
             if (swipeText.Equals("LEFT"))
             {
+                Close(this);
                 UserDialogs.Instance.Toast("LEFT SWIPE!");
+                ShowViewModel<FirstViewModel>();
             }
         }
     }

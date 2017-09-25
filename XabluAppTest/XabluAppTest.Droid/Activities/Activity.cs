@@ -26,6 +26,8 @@ namespace XabluAppTest.Droid.Activities
         {
             base.OnCreate(savedInstanceState);
 
+          
+
             AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
             TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
 

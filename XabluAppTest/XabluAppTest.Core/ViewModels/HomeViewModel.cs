@@ -34,7 +34,7 @@ namespace XabluAppTest.Core.ViewModels
             await InitializeShops();
         }
 
-        public override void Appeared()
+        public override void ViewAppeared()
         {
         }
         

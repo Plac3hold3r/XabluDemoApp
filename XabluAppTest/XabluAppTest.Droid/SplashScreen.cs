@@ -2,14 +2,17 @@ using System;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content.PM;
+using Android.Graphics;
 using Android.OS;
+using Android.Views.Animations;
+using Android.Widget;
 using MvvmCross.Droid.Views;
 
 namespace XabluAppTest.Droid
 {
     [Activity(
         Label = "XabluAppTest.Droid"
-        , MainLauncher = true
+        ,MainLauncher = true
         , Icon = "@mipmap/ic_launcher"
         //, RoundIcon = "@mipmap/ic_launcher_round"
         , Theme = "@style/AppTheme.Splash"
